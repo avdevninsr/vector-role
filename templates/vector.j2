@@ -20,7 +20,7 @@ structured = parse_nginx_log!(.message, format: "combined")
 [sinks.clickhouse]
 type = "clickhouse"
 inputs = ["parse_nginx"]
-endpoint = "http://192.168.0.121:8123"
+endpoint = "http://127.0.0.1:8123"
 database = "nginx_db"
 table = "access_logs"
 skip_unknown_fields = true  # пропускаем поля, которых нет в нашей схеме
